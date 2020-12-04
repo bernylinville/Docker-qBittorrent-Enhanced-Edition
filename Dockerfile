@@ -16,7 +16,7 @@ FROM lsiobase/alpine:3.12
 
 # environment settings
 ENV TZ=Asia/Shanghai
-ENV WEBUIPORT=8080
+ENV WEBUIPORT=16003
 
 # add local files and install qbitorrent
 COPY root /
@@ -29,4 +29,4 @@ RUN  apk add --no-cache python3 \
 
 # ports and volumes
 VOLUME /downloads /config
-EXPOSE 8080  6881  6881/udp
+EXPOSE 16003  16004  16004/udp

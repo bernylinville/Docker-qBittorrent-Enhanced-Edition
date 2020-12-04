@@ -1,17 +1,17 @@
 version: "2"
 services:
   aria2:
-    image: superng6/qbittorrentee
+    image: bernylinville/qbittorrentee
     container_name: qbittorrentee
     environment:
       - PUID=1026
       - PGID=100
       - TZ=Asia/Shanghai
     volumes:
-      - /path/to/appdata/config:/config
-      - /path/to/downloads:/downloads
+      - /mnt/user/docker/Docker-qBittorrent-Enhanced-Edition/config:/config
+      - /mnt/user/downloads:/downloads
     ports:
-      - 6881:6881
-      - 6881:6881/udp
-      - 8080:8080
+      - 16004:16004
+      - 16004:16004/udp
+      - 16003:16003
     restart: unless-stopped
